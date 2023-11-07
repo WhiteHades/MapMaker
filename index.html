@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapmaker Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Mapmaker Game</h1>
+        </header>
+        <main>
+            <section class="map">
+                <div class="grid">
+                    <!-- This is where the 11x11 grid will be generated -->
+                </div>
+            </section>
+            <aside class="missions">
+                <h2>Missions</h2>
+                <!-- Missions will be listed here -->
+            </aside>
+            <section class="controls">
+                <div class="time-remaining">
+                    <!-- Display time units remaining -->
+                </div>
+                <div class="seasons">
+                    <!-- Display current season and missions for the season -->
+                </div>
+                <div class="score">
+                    <!-- Display current score -->
+                </div>
+                <div class="element-display">
+                    <!-- Display the next element to be placed along with rotation and mirroring options -->
+                </div>
+                <button id="rotate">Rotate</button>
+                <button id="mirror">Mirror</button>
+            </section>
+        </main>
+        <footer>
+            <p>Empress French Frie's Mapmaker Game</p>
+        </footer>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
