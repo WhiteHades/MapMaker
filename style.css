@@ -1,0 +1,286 @@
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url("assets/tiles/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*min-height: 100vh;*/
+    font-family: Literata, serif;
+    min-width: 1024px;
+    min-height: 768px;
+    overflow: auto;
+}
+
+* {
+    font-family: Literata, serif;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.map {
+    margin-right: 20px;
+    align-content: center;
+    margin-left: 20px;
+    width: 450px; /* Adjust this value as needed */
+    height: 450px; /* Adjust this value as needed */
+    background: white;
+    border-radius: 10px;;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-grid {
+    /*width: 450px; !* Increase width for larger cells *!*/
+    /*height: 450px; !* Increase height for larger cells *!*/
+    border-collapse: collapse;
+    border-radius: 2px;
+}
+
+.grid-cell {
+    width: 50px; /* Increase cell width for larger cells */
+    height: 37px; /* Increase cell height for larger cells */
+    border: 2px solid white;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.mountain {
+    /* Additional styling for mountain cells if needed */
+}
+
+.current-element-section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#rotate {
+    /*margin-right: 30px;*/
+    margin-bottom: 20px;
+}
+
+#rotate:hover, #mirror:hover {
+    background-color: #e7e7e7;
+}
+
+.side {
+    display: flex;
+    align-items: center;
+}
+
+.element-display {
+    margin: 20px;
+    border: 1px solid black; /* Optional, for visibility */
+    width: 200px; /* Increase width for larger display */
+    height: 120px; /* Increase height for larger display */
+}
+
+.element-display table {
+    border-collapse: collapse;
+    width: 100%; /* Use 100% width for tables */
+}
+
+.element-display td {
+    width: 30px; /* Increase cell width for larger cells */
+    height: 30px; /* Increase cell height for larger cells */
+    border: 1px solid #ddd; /* Optional, for grid visibility */
+    background-size: cover; /* Ensure the image covers the cell */
+}
+
+.active-cell {
+    /* Additional styling for active cells if needed */
+}
+
+.highlight {
+    outline: 2px solid #312c2c;
+    outline-offset: -1px;
+    transition: border 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+.element-time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.element-time img {
+    width: 40px; /* Increase clock icon size */
+    margin-right: 5px;
+}
+
+.element-display {
+    background-color: #fafafa; /* Adjust to match your design */
+    padding: 10px; /* Increase padding for larger display */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    width: 250px; /* Increase width for larger display */
+    height: 150px; /* Increase height for larger display */
+}
+
+#rotate, #mirror {
+    background-color: #f8f8f8; /* Green */
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#gameRestart {
+    background-color: #f8f8f8; /* Green */
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 10px;
+}
+
+.title {
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.seasons-section{
+    display: flex;
+    margin-left: 30px;
+    flex-direction: column;
+}
+
+.seasons {
+    display: flex;
+    gap: 20px;
+}
+
+.total-points {
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#Spring, #Summer, #Autumn, #Winter {
+    /* Increase margin for larger spacing */
+    margin: 0;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px; /* Increase min-height for larger elements */
+}
+
+#Spring {
+    border: 2px solid #408f43; /* Green border for Spring */
+    background-color: #69bd6c; /* Background color */
+}
+
+#Summer {
+    border: 2px solid #dbbb11;
+    background-color: #fce773;
+
+}
+
+#Autumn {
+    border: 2px solid #71461c;
+    background-color: #e9bc93;
+}
+
+#Winter {
+    border: 2px solid #3291a6;
+    background-color: #59d1eb;
+}
+
+.Mission {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.mission {
+    height: 90px; /* Adjust as needed */
+    width: 270px;
+    background-position: center;
+    background-size: contain;
+
+    position: relative;
+    /*width: 300px;*/
+    /*height: 150px;*/
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 10px;
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*display: inline-block;*/
+    vertical-align: top;
+}
+
+.mission-highlight {
+    border: 3px solid #ea6161;
+    box-shadow: 0 0 10px #ea6161;
+}
+
+.mission-points {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f8f8f8;
+    color: #020202;
+}
+
+#Ai, #Bi, #Ci, #Di {
+    position: absolute;
+    top: 65px;
+    right: 5px;
+    background-color: #f8f8f8;
+    color: #000000;
+    border-radius: 20px;
+}
+
+.gameEndss {
+    display: none;
+    position: fixed;
+    margin: 20px;
+    border: 1px solid black; /* Optional, for visibility */
+    width: 200px; /* Increase width for larger display */
+    height: 120px; /* Increase height for larger display */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.gameEnds-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}

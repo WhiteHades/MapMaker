@@ -4,42 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapmaker Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="game-container">
-        <header>
-            <h1>Mapmaker Game</h1>
-        </header>
-        <main>
-            <section class="map">
-                <div class="grid">
-                    <!-- This is where the 11x11 grid will be generated -->
-                </div>
-            </section>
-            <aside class="missions">
-                <h2>Missions</h2>
-                <!-- Missions will be listed here -->
-            </aside>
-            <section class="controls">
-                <div class="time-remaining">
-                    <!-- Display time units remaining -->
-                </div>
+        <header class="header">
+            <h1 class="title">Potato Map</h1>
+            <div class="seasons-section">
                 <div class="seasons">
-                    <!-- Display current season and missions for the season -->
+                    <div id="Spring">Spring: <span>0 points</span></div>
+                    <div id="Summer">Summer: <span>0 points</span></div>
+                    <div id="Autumn">Autumn: <span>0 points</span></div>
+                    <div id="Winter">Winter: <span>0 points</span></div>
                 </div>
-                <div class="score">
-                    <!-- Display current score -->
+                <h3 class="total-points">Total Points: 0</h3>
+                <h3 id="Current">Current Season: Spring AB</h3>
+                <h3 id="season-time" style="display: inline-block; margin-right: 50px;">Elapsed time total:
+                    0/28</h3>
+            </div>
+        </header>
+        <main class="flex-container">
+            <section class="map">
+                <div class="grid"></div>
+            </section>
+            <section class="controls">
+                <div class="Mission">
+                    <div id="A" class="mission">
+                        <div id="Ai" class="mission-points">0 points</div>
+                    </div>
+                    <div id="B" class="mission">
+                        <div id="Bi" class="mission-points">0 points</div>
+                    </div>
+                    <div id="C" class="mission">
+                        <div id="Ci" class="mission-points">0 points</div>
+                    </div>
+                    <div id="D" class="mission">
+                        <div id="Di" class="mission-points">0 points</div>
+                    </div>
                 </div>
-                <div class="element-display">
-                    <!-- Display the next element to be placed along with rotation and mirroring options -->
+                <div class="time-remaining">
+                    <h3 id="season-time2" style="display: inline-block;">Elapsed time season: 0/7</h3>
                 </div>
-                <button id="rotate">Rotate</button>
-                <button id="mirror">Mirror</button>
+                <div class="current-element-section">
+                    <h3>Current Element:</h3>
+                    <div class="side">
+                        <div class="buttonRotateMirror">
+                            <button id="rotate">Rotate</button>
+                            <button id="mirror">Mirror</button>
+                            <button id="gameRestart">Restart Game</button>
+                        </div>
+                        <div class="element-display">
+                            <div class="element-time">
+                                <img src="assets/tiles/clock.png" alt="clock"/>
+                                <span id="element-times"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
-            <p>Empress French Frie's Mapmaker Game</p>
         </footer>
     </div>
     <script src="game.js"></script>
